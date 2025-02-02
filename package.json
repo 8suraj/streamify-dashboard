@@ -17,7 +17,6 @@
     "@heroicons/react": "^2.2.0",
     "@mui/icons-material": "^6.4.2",
     "@mui/material": "^6.4.2",
-    "@pinaca/platform_package_final_v1": "^1.0.0",
     "@tanstack/react-table": "^8.20.6",
     "echarts": "^5.6.0",
     "echarts-for-react": "^3.0.2",
