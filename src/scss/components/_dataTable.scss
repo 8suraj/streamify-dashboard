@@ -1,0 +1,102 @@
+.datagridTable {
+    @apply relative w-full rounded-xl text-left text-base leading-5 border-spacing-y-2 border-separate;
+
+    &-container {
+        @apply h-[35rem] w-full overflow-x-auto;
+    }
+
+    thead {
+        @apply bg-[#c6d0bc] font-bold h-12 rounded-md;
+
+        tr {
+            @apply sticky top-0  rounded-md overflow-hidden;
+        }
+
+        th {
+            @apply text-center  px-4 py-2 whitespace-nowrap  cursor-pointer hover:bg-[#ffffff];
+            & > div {
+                @apply flex items-center gap-2;
+            }
+            &:first-child {
+                @apply rounded-l-md;
+            }
+            &:last-child {
+                @apply rounded-r-md;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            @apply h-12 border-b border-[#f6d78b] bg-[#deeece] hover:bg-[#ffffff] font-bold;
+
+            &.active {
+                @apply bg-blue-500;
+            }
+
+            td {
+                @apply align-middle whitespace-nowrap px-4 py-2;
+                &:first-child {
+                    @apply rounded-l-md;
+                }
+                &:last-child {
+                    @apply rounded-r-md;
+                }
+                & .growth {
+                    @apply text-green-400;
+                }
+
+                & .degrowth {
+                    @apply text-red-500;
+                }
+            }
+        }
+    }
+
+    &-pagination {
+        @apply flex justify-between py-2 px-4 items-center;
+
+        &-itemsdisplay {
+            @apply w-24;
+        }
+
+        &-itemcount {
+            @apply whitespace-nowrap text-lg font-semibold;
+
+            span:first-child {
+                @apply text-[#ee5d19];
+            }
+
+            span:last-child {
+                @apply text-[#ee5d19];
+            }
+        }
+    }
+    &-popover {
+        @apply flex flex-col p-4 rounded-md w-[10rem] z-[100] gap-1 bg-[#272626];
+
+        &-option {
+            @apply flex items-center cursor-pointer gap-2 p-2 text-white hover:bg-[#424242];
+        }
+    }
+    &-filter {
+        @apply flex flex-col gap-1 p-1;
+
+        &-input {
+            @apply bg-[#474747] border border-[#1e222d] rounded-md text-white outline-none p-2 w-full;
+        }
+        &-range {
+            @apply w-full flex;
+        }
+    }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide number input arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,20 @@
+.topArtistBanner {
+    @apply py-3 flex flex-col gap-3;
+    &-header {
+        @apply text-lg font-bold uppercase max-sm:text-base;
+    }
+    &-artists {
+        @apply flex max-lg:justify-between   lg:gap-6 px-4;
+    }
+    &-artist {
+        @apply relative size-28 rounded-full overflow-hidden cursor-pointer outline outline-4 outline-[#ee5d19] outline-offset-2 max-md:size-10;
+
+        img {
+            @apply w-full h-full object-cover;
+        }
+
+        &-name {
+            @apply absolute bottom-[-100%] left-1/2 -translate-x-1/2 bg-[#ee5d19] bg-opacity-60 text-white font-bold   w-full h-full flex items-center justify-center opacity-0 transition-all duration-500 group-hover:bottom-1/2 group-hover:translate-y-1/2 group-hover:opacity-100;
+        }
+    }
+}

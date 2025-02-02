@@ -1,0 +1,6 @@
+body {
+    @apply text-sm max-md:text-xs;
+}
+#root {
+    @apply lg:flex-row flex max-lg:flex-col;
+}

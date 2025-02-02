@@ -1,0 +1,100 @@
+{
+    "monthlyRevenue": [
+        {
+            "month": "Jan",
+            "subscriptions": 50000,
+            "ads": 20000,
+            "sponsorships": 10000,
+            "affiliate": 5000,
+            "total": 85000
+        },
+        {
+            "month": "Feb",
+            "subscriptions": 55000,
+            "ads": 25000,
+            "sponsorships": 12000,
+            "affiliate": 6000,
+            "total": 98000
+        },
+        {
+            "month": "Mar",
+            "subscriptions": 60000,
+            "ads": 28000,
+            "sponsorships": 15000,
+            "affiliate": 7000,
+            "total": 110000
+        },
+        {
+            "month": "Apr",
+            "subscriptions": 62000,
+            "ads": 30000,
+            "sponsorships": 16000,
+            "affiliate": 7500,
+            "total": 115500
+        },
+        {
+            "month": "May",
+            "subscriptions": 63000,
+            "ads": 32000,
+            "sponsorships": 18000,
+            "affiliate": 8000,
+            "total": 121000
+        },
+        {
+            "month": "Jun",
+            "subscriptions": 65000,
+            "ads": 34000,
+            "sponsorships": 20000,
+            "affiliate": 8500,
+            "total": 127500
+        },
+        {
+            "month": "Jul",
+            "subscriptions": 67000,
+            "ads": 36000,
+            "sponsorships": 22000,
+            "affiliate": 9000,
+            "total": 134000
+        },
+        {
+            "month": "Aug",
+            "subscriptions": 69000,
+            "ads": 38000,
+            "sponsorships": 24000,
+            "affiliate": 9500,
+            "total": 140500
+        },
+        {
+            "month": "Sep",
+            "subscriptions": 71000,
+            "ads": 40000,
+            "sponsorships": 26000,
+            "affiliate": 10000,
+            "total": 147000
+        },
+        {
+            "month": "Oct",
+            "subscriptions": 73000,
+            "ads": 42000,
+            "sponsorships": 28000,
+            "affiliate": 10500,
+            "total": 153500
+        },
+        {
+            "month": "Nov",
+            "subscriptions": 75000,
+            "ads": 44000,
+            "sponsorships": 30000,
+            "affiliate": 11000,
+            "total": 160000
+        },
+        {
+            "month": "Dec",
+            "subscriptions": 78000,
+            "ads": 46000,
+            "sponsorships": 32000,
+            "affiliate": 11500,
+            "total": 167500
+        }
+    ]
+}

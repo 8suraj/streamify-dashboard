@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-Thin.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("WorkSans-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Work Sans"),
+        url("/WorkSans-Black.woff") format("woff");
+}
+:root {
+    @apply bg-[#f8f7f1];
+}
+/* #root {
+    @apply w-[90%] m-auto;
+} */

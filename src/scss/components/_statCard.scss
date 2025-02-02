@@ -1,0 +1,46 @@
+.statcard {
+    @apply rounded-xl p-4 max-lg:w-full w-[20rem] shadow-[0px_3.86px_7.33px_0px_rgba(0,0,0,0.12)] gap-2;
+
+    &-count {
+        @apply text-3xl font-bold capitalize my-3 max-sm:text-base;
+    }
+    &-name {
+        @apply text-xl font-bold capitalize my-3 max-sm:text-base;
+    }
+    &-type {
+        @apply font-medium text-[#686868]  max-sm:text-base text-base;
+    }
+    &-stat {
+        @apply flex  justify-between;
+    }
+    &-data {
+        @apply w-1/2;
+    }
+    &-graph {
+        @apply h-24 py-2 w-2/3;
+    }
+    &-artistImg {
+        @apply size-24 rounded-full overflow-hidden;
+        img {
+            @apply object-cover w-full h-full;
+        }
+    }
+    &-growth {
+        @apply flex justify-between;
+        .growth {
+            @apply text-[#20c997];
+        }
+        .fall {
+            @apply text-[#ef4444];
+        }
+        span {
+            @apply font-medium;
+            &:last-child {
+                @apply flex  gap-1 items-center;
+            }
+            &:first-child {
+                @apply text-[#686868]   align-middle;
+            }
+        }
+    }
+}
