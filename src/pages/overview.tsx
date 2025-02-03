@@ -20,20 +20,20 @@ export default function Overview() {
 				<h1 className='overview-header'>Overview</h1>
 
 				<div className='overview-stats'>
-					{staticData.analytics.map(metric=> 
-					<StatCard key={metric.statType}
-          statType={metric.statType}
-          currentStat={metric.currentStat}
-          comparator={metric.comparator}
-          growth={metric.growth}
-          isGrowing={metric.isGrowing}
-          data={metric.data}
-		  className={metric.className} />)}
-					
+					{staticData.analytics.map(metric =>
+						<StatCard key={metric.statType}
+							statType={metric.statType}
+							currentStat={metric.currentStat}
+							comparator={metric.comparator}
+							growth={metric.growth}
+							isGrowing={metric.isGrowing}
+							data={metric.data}
+							className={metric.className} />)}
+
 
 					<TopArtistCard className='bg-[#ee5d191a]' artistName={staticData.topArtist.artistName}
-        artistImage={staticData.topArtist.artistImage}
-        totalStreams={staticData.topArtist.totalStreams} />
+						artistImage={staticData.topArtist.artistImage}
+						totalStreams={staticData.topArtist.totalStreams} />
 				</div>
 				<TopArtistBanner />
 				<div className=''>

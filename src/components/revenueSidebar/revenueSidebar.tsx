@@ -3,6 +3,7 @@ import ProgressBar from '../graphs/progressBar';
 import { useState } from 'react';
 import { MonthlyRevenue } from '../../lib/types';
 import data from '../../db.json';
+import { formatNumber } from '../../lib/utils';
 export default function RevenueSidebar() {
 	const [currentRevenueData, setCurrentRevenueData] =
 		useState<MonthlyRevenue | null>({
@@ -18,7 +19,7 @@ export default function RevenueSidebar() {
 			<div className='overview-revenue-graph'>
 				<h1 className='overview-header'>
 					Monthly Revenue (
-					{`${currentRevenueData?.month} Total: ${currentRevenueData?.total}`})
+					{`${currentRevenueData?.month} Total: ${formatNumber(currentRevenueData?.total!)}`})
 				</h1>
 				{currentRevenueData ? (
 					<RevenueNightingaleChart revenueData={currentRevenueData} />
@@ -54,7 +55,7 @@ function RevenueCard({
 				<div className='text-lg font-bold capitalize max-sm:text-base flex justify-between'>
 					<span>{revenue?.month}</span>
 
-					<span>{`$ ${revenue?.total}`}</span>
+					<span>{`$ ${formatNumber(revenue?.total)}`}</span>
 				</div>
 				<div className='flex gap-2'>
 					<span className='min-w-[6rem]'>Subscription</span>

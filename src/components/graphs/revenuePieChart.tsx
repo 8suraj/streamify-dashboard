@@ -20,7 +20,7 @@ export default function RevenueNightingaleChart({
 		},
 		tooltip: {
 			trigger: 'item',
-			formatter: '{b}: <b>{c}</b> ({d}%)',
+			formatter: `{b}: <b>{c}</b> ({d}%)`,
 		},
 		legend: {
 			bottom: 10,

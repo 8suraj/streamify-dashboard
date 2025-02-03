@@ -5,6 +5,20 @@
     }
     &-stats {
         @apply flex gap-2 max-lg:flex-col max-lg:gap-4;
+        & > div {
+            &:nth-child(1) {
+                @apply bg-[#c6d0bc];
+            }
+            &:nth-child(2) {
+                @apply bg-[#f6d78b];
+            }
+            &:nth-child(3) {
+                @apply bg-[#a3a7fc];
+            }
+            &:nth-child(4) {
+                @apply bg-[#a3fcc5];
+            }
+        }
     }
     &-revenue {
         @apply w-full lg:w-[25%]  h-full bg-[#f1eee3];
