@@ -1,4 +1,4 @@
-import artist from '../assets/svgs/1.jpg';
+import artist from '../../assets/svgs/1.jpg';
 export interface ArtistBannerProps {
 	artistDetails: ArtistProps[];
 }

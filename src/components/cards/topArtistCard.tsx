@@ -1,4 +1,4 @@
-import artist from '../assets/svgs/1.jpg';
+import artist from '../../assets/svgs/1.jpg';
 
 export default function TopArtistCard({ className = '' }) {
 	return (
