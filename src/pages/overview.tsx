@@ -1,15 +1,24 @@
-import DatagridTable from '../components/datagridTable/datagridTable';
-import RevenueSidebar from '../components/revenueSidebar/revenueSidebar';
 import StatCard from '../components/analyticsCard/analyticsCard';
-import TopArtistBanner from '../components/banners/topArtistBanner';
-import TopArtistCard from '../components/cards/topArtistCard';
-import TopStreamedSongsChart from '../components/graphs/topSongsCharts';
-import UserGrowthChart from '../components/graphs/userChart';
 import useIsLargeScreen from '../hooks/useIsLargeScreen';
 import { songDataColumns } from '../lib/tableColumnDefs';
 import { ISongData } from '../lib/types/table';
-import staticData from '../db.json'
-
+import staticData from '../db.json';
+import LazyLoader from '../hoc/lazyLoader';
+import { lazy } from 'react';
+const TopArtistCard = lazy(() => import('../components/cards/topArtistCard'));
+const UserGrowthChart = lazy(() => import('../components/graphs/userChart'));
+const TopStreamedSongsChart = lazy(
+	() => import('../components/graphs/topSongsCharts')
+);
+const TopArtistBanner = lazy(
+	() => import('../components/banners/topArtistBanner')
+);
+const DatagridTable = lazy(
+	() => import('../components/datagridTable/datagridTable')
+);
+const RevenueSidebar = lazy(
+	() => import('../components/revenueSidebar/revenueSidebar')
+);
 
 export default function Overview() {
 	const isLargeScreen = useIsLargeScreen(1024); // Use custom hook
@@ -20,33 +29,43 @@ export default function Overview() {
 				<h1 className='overview-header'>Overview</h1>
 
 				<div className='overview-stats'>
-					{staticData.analytics.map(metric =>
-						<StatCard key={metric.statType}
+					{staticData.analytics.map((metric) => (
+						<StatCard
+							key={metric.statType}
 							statType={metric.statType}
 							currentStat={metric.currentStat}
 							comparator={metric.comparator}
 							growth={metric.growth}
 							isGrowing={metric.isGrowing}
 							data={metric.data}
-							className={metric.className} />)}
+							className={metric.className}
+						/>
+					))}
 
-
-					<TopArtistCard className='bg-[#ee5d191a]' artistName={staticData.topArtist.artistName}
+					<TopArtistCard
+						className='bg-[#ee5d191a]'
+						artistName={staticData.topArtist.artistName}
 						artistImage={staticData.topArtist.artistImage}
-						totalStreams={staticData.topArtist.totalStreams} />
+						totalStreams={staticData.topArtist.totalStreams}
+					/>
 				</div>
-				<TopArtistBanner />
-				<div className=''>
+				<LazyLoader>
+					<TopArtistBanner />
+				</LazyLoader>
+
+				<LazyLoader>
 					<h1 className='overview-header'>User in Last Month</h1>
 					<UserGrowthChart className='overview-usergrowth-graph' />
-				</div>
-				<div>
+				</LazyLoader>
+
+				<LazyLoader>
 					<h1 className='overview-header'>
 						Top 5 Most Streamed Songs (Last 30 Days)
 					</h1>
 					<TopStreamedSongsChart />
-				</div>
-				<div>
+				</LazyLoader>
+
+				<LazyLoader>
 					<h1 className='overview-header'>Recent Streams</h1>
 					<DatagridTable<ISongData>
 						isFilterEnabled
@@ -55,10 +74,12 @@ export default function Overview() {
 						columns={songDataColumns}
 						data={staticData.songData}
 					/>
-				</div>
+				</LazyLoader>
 			</div>
 
-			{isLargeScreen && <RevenueSidebar />}
+			<LazyLoader className='lg:w-[25%]'>
+				{isLargeScreen && <RevenueSidebar />}
+			</LazyLoader>
 		</div>
 	);
 }

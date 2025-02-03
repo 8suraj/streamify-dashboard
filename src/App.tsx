@@ -1,10 +1,13 @@
 import './App.css';
 import Navbar from './components/navbar/navbar';
-import RevenueSidebar from './components/revenueSidebar/revenueSidebar';
 import Overview from './pages/overview';
 import './scss/main.scss';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 import useIsLargeScreen from './hooks/useIsLargeScreen';
+import { lazy, Suspense } from 'react';
+const RevenueSidebar = lazy(
+	() => import('./components/revenueSidebar/revenueSidebar')
+);
 const Router = () => {
 	const isLargeScreen = useIsLargeScreen(1024); // Use custom hook
 
@@ -24,7 +27,11 @@ const Router = () => {
 	if (!isLargeScreen) {
 		baseRoutes[0].children.push({
 			path: '/revenue',
-			element: <RevenueSidebar />,
+			element: (
+				<Suspense fallback={<div>Loading...</div>}>
+					<RevenueSidebar />
+				</Suspense>
+			),
 		});
 	}
 
