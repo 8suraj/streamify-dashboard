@@ -5,17 +5,17 @@ export const songDataColumns: CustomColumnDef<ISongData>[] = [
 	{
 		header: 'Song Name',
 		accessorKey: 'songName',
-		meta: { filterVariant: 'range', align: 'left' },
+		meta: { filterVariant: '', align: 'left' },
 	},
 	{
 		header: 'Artist',
 		accessorKey: 'artist',
-		meta: { filterVariant: 'range', align: 'left' },
+		meta: { filterVariant: '', align: 'left' },
 	},
 	{
 		header: 'Date Streamed',
 		accessorKey: 'dateStreamed',
-		meta: { filterVariant: 'range', align: 'left' },
+		meta: { filterVariant: '', align: 'left' },
 	},
 	{
 		header: 'Stream Count',
@@ -26,6 +26,6 @@ export const songDataColumns: CustomColumnDef<ISongData>[] = [
 	{
 		header: 'User ID',
 		accessorKey: 'userId',
-		meta: { filterVariant: 'range', align: 'right' },
+		meta: { filterVariant: '', align: 'right' },
 	},
 ];

@@ -96,5 +96,515 @@
             "affiliate": 11500,
             "total": 167500
         }
+    ],
+    "userGrowth": [
+        {
+            "month": "2023-02",
+            "totalUsers": 52000,
+            "activeUsers": 25000
+        },
+        {
+            "month": "2023-03",
+            "totalUsers": 56000,
+            "activeUsers": 27000
+        },
+        {
+            "month": "2023-04",
+            "totalUsers": 60000,
+            "activeUsers": 29000
+        },
+        {
+            "month": "2023-05",
+            "totalUsers": 64000,
+            "activeUsers": 31000
+        },
+        {
+            "month": "2023-06",
+            "totalUsers": 68000,
+            "activeUsers": 33000
+        },
+        {
+            "month": "2023-07",
+            "totalUsers": 72000,
+            "activeUsers": 35000
+        },
+        {
+            "month": "2023-08",
+            "totalUsers": 75000,
+            "activeUsers": 37000
+        },
+        {
+            "month": "2023-09",
+            "totalUsers": 78000,
+            "activeUsers": 39000
+        },
+        {
+            "month": "2023-10",
+            "totalUsers": 81000,
+            "activeUsers": 41000
+        },
+        {
+            "month": "2023-11",
+            "totalUsers": 85000,
+            "activeUsers": 43000
+        },
+        {
+            "month": "2023-12",
+            "totalUsers": 88000,
+            "activeUsers": 45000
+        },
+        {
+            "month": "2024-01",
+            "totalUsers": 90000,
+            "activeUsers": 47000
+        }
+    ],
+    "songs": [
+        {
+            "name": "Blinding Lights",
+            "streams": [
+                [
+                    "2024-01-01",
+                    12000
+                ],
+                [
+                    "2024-01-02",
+                    11500
+                ],
+                [
+                    "2024-01-03",
+                    13000
+                ],
+                [
+                    "2024-01-04",
+                    14000
+                ],
+                [
+                    "2024-01-05",
+                    12500
+                ]
+            ]
+        },
+        {
+            "name": "Shape of You",
+            "streams": [
+                [
+                    "2024-01-01",
+                    14000
+                ],
+                [
+                    "2024-01-02",
+                    13500
+                ],
+                [
+                    "2024-01-03",
+                    14500
+                ],
+                [
+                    "2024-01-04",
+                    15000
+                ],
+                [
+                    "2024-01-05",
+                    13800
+                ]
+            ]
+        },
+        {
+            "name": "Levitating",
+            "streams": [
+                [
+                    "2024-01-01",
+                    11000
+                ],
+                [
+                    "2024-01-02",
+                    10800
+                ],
+                [
+                    "2024-01-03",
+                    11500
+                ],
+                [
+                    "2024-01-04",
+                    11800
+                ],
+                [
+                    "2024-01-05",
+                    11200
+                ]
+            ]
+        },
+        {
+            "name": "Uptown Funk",
+            "streams": [
+                [
+                    "2024-01-01",
+                    9000
+                ],
+                [
+                    "2024-01-02",
+                    8800
+                ],
+                [
+                    "2024-01-03",
+                    9500
+                ],
+                [
+                    "2024-01-04",
+                    9700
+                ],
+                [
+                    "2024-01-05",
+                    9200
+                ]
+            ]
+        },
+        {
+            "name": "Someone Like You",
+            "streams": [
+                [
+                    "2024-01-01",
+                    10500
+                ],
+                [
+                    "2024-01-02",
+                    10200
+                ],
+                [
+                    "2024-01-03",
+                    10800
+                ],
+                [
+                    "2024-01-04",
+                    11000
+                ],
+                [
+                    "2024-01-05",
+                    10700
+                ]
+            ]
+        }
+    ],
+    "topArtists": [
+        {
+            "name": "The Weeknd",
+            "image": "https://i.scdn.co/image/ab6761610000517424b3c0f33bc5e3f6a53f84d7"
+        },
+        {
+            "name": "Ed Sheeran",
+            "image": "https://i.scdn.co/image/ab67616100005174d1b0c16bf77cfe30c09b4951"
+        },
+        {
+            "name": "Taylor Swift",
+            "image": "https://i.scdn.co/image/ab6761610000517499e4fca7c0b7cb166d915789"
+        },
+        {
+            "name": "Drake",
+            "image": "https://i.scdn.co/image/ab67616100005174e94f88ff74ae4ddcab961f97"
+        },
+        {
+            "name": "Dua Lipa",
+            "image": "https://i.scdn.co/image/ab6761610000517419c2790744c792d05570bb71"
+        }
+    ],
+    "analytics": [
+        {
+            "className": "bg-[#c6d0bc]",
+            "statType": "Total Users",
+            "currentStat": 1500000,
+            "comparator": "since last month",
+            "growth": 5.2,
+            "isGrowing": true,
+            "data": [
+                {
+                    "date": "2023-08",
+                    "value": 1200000
+                },
+                {
+                    "date": "2023-09",
+                    "value": 1250000
+                },
+                {
+                    "date": "2023-10",
+                    "value": 1300000
+                },
+                {
+                    "date": "2023-11",
+                    "value": 1350000
+                },
+                {
+                    "date": "2023-12",
+                    "value": 1400000
+                },
+                {
+                    "date": "2024-01",
+                    "value": 1500000
+                }
+            ]
+        },
+        {
+            "className": "bg-[#f6d78b]",
+            "statType": "Active Users",
+            "currentStat": 450000,
+            "comparator": "since last month",
+            "growth": 4.8,
+            "isGrowing": true,
+            "data": [
+                {
+                    "date": "2023-08",
+                    "value": 380000
+                },
+                {
+                    "date": "2023-09",
+                    "value": 390000
+                },
+                {
+                    "date": "2023-10",
+                    "value": 400000
+                },
+                {
+                    "date": "2023-11",
+                    "value": 420000
+                },
+                {
+                    "date": "2023-12",
+                    "value": 430000
+                },
+                {
+                    "date": "2024-01",
+                    "value": 450000
+                }
+            ]
+        },
+        {
+            "className": "bg-[#a3a7fc]",
+            "statType": "Total Streams",
+            "currentStat": 50000000,
+            "comparator": "since last month",
+            "growth": 6.5,
+            "isGrowing": true,
+            "data": [
+                {
+                    "date": "2023-08",
+                    "value": 40000000
+                },
+                {
+                    "date": "2023-09",
+                    "value": 42000000
+                },
+                {
+                    "date": "2023-10",
+                    "value": 44000000
+                },
+                {
+                    "date": "2023-11",
+                    "value": 46000000
+                },
+                {
+                    "date": "2023-12",
+                    "value": 48000000
+                },
+                {
+                    "date": "2024-01",
+                    "value": 50000000
+                }
+            ]
+        },
+        {
+            "className": "bg-[#a3fcc5]",
+            "statType": "Revenue",
+            "currentStat": 1200000,
+            "comparator": "since last month",
+            "growth": 3.9,
+            "isGrowing": true,
+            "data": [
+                {
+                    "date": "2023-08",
+                    "value": 1000000
+                },
+                {
+                    "date": "2023-09",
+                    "value": 1050000
+                },
+                {
+                    "date": "2023-10",
+                    "value": 1100000
+                },
+                {
+                    "date": "2023-11",
+                    "value": 1150000
+                },
+                {
+                    "date": "2023-12",
+                    "value": 1180000
+                },
+                {
+                    "date": "2024-01",
+                    "value": 1200000
+                }
+            ]
+        }
+    ],
+    "topArtist": {
+        "artistName": "The Weeknd",
+        "artistImage": "https://upload.wikimedia.org/wikipedia/commons/3/3f/The_Weeknd_2020.png",
+        "totalStreams": 9800000
+    },
+    "songData": [
+        {
+            "songName": "Blinding Lights",
+            "artist": "The Weeknd",
+            "dateStreamed": "2024-02-01",
+            "streamCount": 15000,
+            "userId": "USR123"
+        },
+        {
+            "songName": "Shape of You",
+            "artist": "Ed Sheeran",
+            "dateStreamed": "2024-02-02",
+            "streamCount": 18000,
+            "userId": "USR456"
+        },
+        {
+            "songName": "Levitating",
+            "artist": "Dua Lipa",
+            "dateStreamed": "2024-02-03",
+            "streamCount": 14000,
+            "userId": "USR789"
+        },
+        {
+            "songName": "Uptown Funk",
+            "artist": "Bruno Mars",
+            "dateStreamed": "2024-02-04",
+            "streamCount": 17000,
+            "userId": "USR321"
+        },
+        {
+            "songName": "Someone Like You",
+            "artist": "Adele",
+            "dateStreamed": "2024-02-05",
+            "streamCount": 16000,
+            "userId": "USR654"
+        },
+        {
+            "songName": "Rockstar",
+            "artist": "Post Malone",
+            "dateStreamed": "2024-02-06",
+            "streamCount": 19000,
+            "userId": "USR987"
+        },
+        {
+            "songName": "Dance Monkey",
+            "artist": "Tones and I",
+            "dateStreamed": "2024-02-07",
+            "streamCount": 14500,
+            "userId": "USR159"
+        },
+        {
+            "songName": "Closer",
+            "artist": "The Chainsmokers",
+            "dateStreamed": "2024-02-08",
+            "streamCount": 15500,
+            "userId": "USR753"
+        },
+        {
+            "songName": "Perfect",
+            "artist": "Ed Sheeran",
+            "dateStreamed": "2024-02-09",
+            "streamCount": 17500,
+            "userId": "USR852"
+        },
+        {
+            "songName": "Sunflower",
+            "artist": "Post Malone",
+            "dateStreamed": "2024-02-10",
+            "streamCount": 13500,
+            "userId": "USR741"
+        },
+        {
+            "songName": "Sicko Mode",
+            "artist": "Travis Scott",
+            "dateStreamed": "2024-02-11",
+            "streamCount": 14000,
+            "userId": "USR963"
+        },
+        {
+            "songName": "Bad Guy",
+            "artist": "Billie Eilish",
+            "dateStreamed": "2024-02-12",
+            "streamCount": 16500,
+            "userId": "USR852"
+        },
+        {
+            "songName": "God's Plan",
+            "artist": "Drake",
+            "dateStreamed": "2024-02-13",
+            "streamCount": 18000,
+            "userId": "USR357"
+        },
+        {
+            "songName": "Old Town Road",
+            "artist": "Lil Nas X",
+            "dateStreamed": "2024-02-14",
+            "streamCount": 17000,
+            "userId": "USR258"
+        },
+        {
+            "songName": "Believer",
+            "artist": "Imagine Dragons",
+            "dateStreamed": "2024-02-15",
+            "streamCount": 15000,
+            "userId": "USR159"
+        },
+        {
+            "songName": "Havana",
+            "artist": "Camila Cabello",
+            "dateStreamed": "2024-02-16",
+            "streamCount": 14000,
+            "userId": "USR753"
+        },
+        {
+            "songName": "Senorita",
+            "artist": "Shawn Mendes",
+            "dateStreamed": "2024-02-17",
+            "streamCount": 16000,
+            "userId": "USR963"
+        },
+        {
+            "songName": "7 Rings",
+            "artist": "Ariana Grande",
+            "dateStreamed": "2024-02-18",
+            "streamCount": 17500,
+            "userId": "USR741"
+        },
+        {
+            "songName": "Lucid Dreams",
+            "artist": "Juice WRLD",
+            "dateStreamed": "2024-02-19",
+            "streamCount": 13500,
+            "userId": "USR357"
+        },
+        {
+            "songName": "Shallow",
+            "artist": "Lady Gaga",
+            "dateStreamed": "2024-02-20",
+            "streamCount": 15500,
+            "userId": "USR258"
+        },
+        {
+            "songName": "Take Me to Church",
+            "artist": "Hozier",
+            "dateStreamed": "2024-02-21",
+            "streamCount": 14500,
+            "userId": "USR123"
+        },
+        {
+            "songName": "Thinking Out Loud",
+            "artist": "Ed Sheeran",
+            "dateStreamed": "2024-02-22",
+            "streamCount": 15000,
+            "userId": "USR456"
+        }
     ]
 }

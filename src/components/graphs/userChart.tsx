@@ -1,52 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import ReactECharts from 'echarts-for-react';
-import * as echarts from 'echarts';
+import staticData from '../../db.json';
+import { formatNumber } from '../../lib/utils';
 
-// Mock function to simulate API response for user growth data
-const fetchUserData = async () => {
-	return new Promise((resolve) => {
-		setTimeout(() => {
-			const data = [];
-			const startDate = new Date();
-			startDate.setMonth(startDate.getMonth() - 11); // 12 months ago
-
-			for (let i = 0; i < 12; i++) {
-				const date = new Date(startDate);
-				date.setMonth(date.getMonth() + i);
-
-				data.push({
-					month: date.toISOString().slice(0, 7), // YYYY-MM format
-					totalUsers: Math.floor(Math.random() * 50000) + 50000, // 50K to 100K
-					activeUsers: Math.floor(Math.random() * 30000) + 20000, // 20K to 50K
-				});
-			}
-			resolve(data);
-		}, 1000);
-	});
-};
-
-// Helper function to format numbers (1K, 10K, etc.)
-const formatNumber = (num) => {
-	if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-	if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-	return num;
-};
-
-export default function UserGrowthChart({ className }) {
-	const [userData, setUserData] = useState([]);
-
-	useEffect(() => {
-		fetchUserData().then((data) => {
-			setUserData(data);
-		});
-	}, []);
-
-	if (!userData.length) return <p>Loading chart data...</p>;
-
-	// Extract months for x-axis
-	const months = userData.map((item) => item.month);
-	const totalUsers = userData.map((item) => item.totalUsers);
-	const activeUsers = userData.map((item) => item.activeUsers);
+export default function UserGrowthChart({ className }: { className?: string }) {
+	const months = staticData.userGrowth.map((item) => item.month);
+	const totalUsers = staticData.userGrowth.map((item) => item.totalUsers);
+	const activeUsers = staticData.userGrowth.map((item) => item.activeUsers);
 
 	const option = {
 		title: {
@@ -56,10 +15,12 @@ export default function UserGrowthChart({ className }) {
 		},
 		tooltip: {
 			trigger: 'axis',
-			formatter: (params) => {
+			formatter: (params: any) => {
 				let tooltipContent = `<b>${params[0].axisValue}</b><br/>`;
-				params.forEach((item) => {
-					tooltipContent += `${item.marker} ${item.seriesName}: <b>${formatNumber(item.value)}</b><br/>`;
+				params.forEach((item: any) => {
+					tooltipContent += `${item.marker} ${
+						item.seriesName
+					}: <b>${formatNumber(item.value)}</b><br/>`;
 				});
 				return tooltipContent;
 			},
@@ -81,7 +42,7 @@ export default function UserGrowthChart({ className }) {
 			{
 				type: 'slider',
 				start: 0,
-				end: 100, // Allow full view of the last 12 months
+				end: 100,
 			},
 			{
 				type: 'inside',
@@ -93,7 +54,7 @@ export default function UserGrowthChart({ className }) {
 			splitLine: { show: false },
 			axisTick: { show: false },
 
-			data: months, // Months dynamically fetched
+			data: months,
 			boundaryGap: false,
 		},
 		yAxis: {
@@ -105,7 +66,7 @@ export default function UserGrowthChart({ className }) {
 			axisTick: { show: false },
 
 			axisLabel: {
-				formatter: formatNumber, // Format Y-axis labels
+				formatter: formatNumber,
 				width: 0,
 			},
 		},
@@ -113,30 +74,30 @@ export default function UserGrowthChart({ className }) {
 			{
 				name: 'Total Users',
 				type: 'line',
-				smooth: true, // ✅ Curved line
+				smooth: true,
 				showSymbol: false,
 
 				data: totalUsers,
 				lineStyle: {
 					width: 3,
-					color: '#1E90FF', // 🔵 Custom Blue Color for Total Users
+					color: '#1E90FF',
 				},
 				itemStyle: {
-					color: '#1E90FF', // 🔵 Ensures the color is the same on hover
+					color: '#1E90FF',
 				},
 			},
 			{
 				name: 'Active Users',
 				type: 'line',
-				smooth: true, // ✅ Curved line
+				smooth: true,
 				showSymbol: false,
 				data: activeUsers,
 				lineStyle: {
 					width: 3,
-					color: '#32CD32', // 🟢 Custom Green Color for Active Users
+					color: '#32CD32',
 				},
 				itemStyle: {
-					color: '#32CD32', // 🟢 Ensures the color is the same on hover
+					color: '#32CD32',
 				},
 			},
 		],

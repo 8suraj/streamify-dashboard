@@ -1,10 +1,23 @@
 import ReactECharts from 'echarts-for-react';
+import { formatNumber } from '../../lib/utils';
+
 export interface MicroLineChartProps {
-	time: number | string;
+	date: number | string;
 	value: number;
 }
+
 const MicroLineChart = ({ data }: { data: MicroLineChartProps[] }) => {
 	const options = {
+		tooltip: {
+			trigger: 'axis',
+			axisPointer: {
+				type: 'line',
+			},
+			formatter: (params: any) => {
+				const { name, value } = params[0];
+				return `<b>${name}</b><br/>Value: ${formatNumber(value[1])}`;
+			},
+		},
 		xAxis: {
 			type: 'time',
 			axisLabel: { show: false },
@@ -23,7 +36,7 @@ const MicroLineChart = ({ data }: { data: MicroLineChartProps[] }) => {
 		},
 		series: [
 			{
-				data: data.map((item) => [item.time, item.value]),
+				data: data.map((item) => [item.date, item.value]),
 				type: 'line',
 				smooth: true,
 				lineStyle: {

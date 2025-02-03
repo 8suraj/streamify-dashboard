@@ -8,46 +8,32 @@ import UserGrowthChart from '../components/graphs/userChart';
 import useIsLargeScreen from '../hooks/useIsLargeScreen';
 import { songDataColumns } from '../lib/tableColumnDefs';
 import { ISongData } from '../lib/types/table';
+import staticData from '../db.json'
 
-const songData: ISongData[] = [
-	{
-		songName: 'Blinding Lights',
-		artist: 'The Weeknd',
-		dateStreamed: '2024-02-01',
-		streamCount: 15000,
-		userId: 'USR123',
-	},
-	{
-		songName: 'Shape of You',
-		artist: 'Ed Sheeran',
-		dateStreamed: '2024-02-02',
-		streamCount: 18000,
-		userId: 'USR456',
-	},
-	{
-		songName: 'Levitating',
-		artist: 'Dua Lipa',
-		dateStreamed: '2024-02-03',
-		streamCount: 14000,
-		userId: 'USR789',
-	},
-];
 
 export default function Overview() {
 	const isLargeScreen = useIsLargeScreen(1024); // Use custom hook
 
 	return (
 		<div className='overview'>
-			<div className='px-4 py-10 pl-8 max-lg:w-full w-[75%] flex flex-col gap-8'>
+			<div className='px-4 py-10  max-lg:w-full w-[75%] flex flex-col gap-8'>
 				<h1 className='overview-header'>Overview</h1>
 
 				<div className='overview-stats'>
-					<StatCard className='bg-[#c6d0bc]' />
-					<StatCard className='bg-[#f6d78b]' />
-					<StatCard className='bg-[#a3a7fc]' />
-					<StatCard className='bg-[#a3fcc5]' />
+					{staticData.analytics.map(metric=> 
+					<StatCard key={metric.statType}
+          statType={metric.statType}
+          currentStat={metric.currentStat}
+          comparator={metric.comparator}
+          growth={metric.growth}
+          isGrowing={metric.isGrowing}
+          data={metric.data}
+		  className={metric.className} />)}
+					
 
-					<TopArtistCard className='bg-[#ee5d191a]' />
+					<TopArtistCard className='bg-[#ee5d191a]' artistName={staticData.topArtist.artistName}
+        artistImage={staticData.topArtist.artistImage}
+        totalStreams={staticData.topArtist.totalStreams} />
 				</div>
 				<TopArtistBanner />
 				<div className=''>
@@ -67,7 +53,7 @@ export default function Overview() {
 						isSortingEnabled
 						isPaginationEnabled
 						columns={songDataColumns}
-						data={songData}
+						data={staticData.songData}
 					/>
 				</div>
 			</div>
